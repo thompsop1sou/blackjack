@@ -2,10 +2,11 @@
 
 int main()
 {
+	// Game beginning
 	Game bj;
-
 	bj.intro();
 
+	// Game loop
 	while (!bj.finished())
 	{
 		bj.display();
@@ -13,6 +14,7 @@ int main()
 		bj.process();
 	}
 
+	// Game end
 	bj.results();
 
 	return 0;
