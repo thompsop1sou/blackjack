@@ -59,6 +59,7 @@ void Input::retrieve()
 	if (m_kind == None) // No input, delay
 	{
 		cout << "\n" << m_prompt;
+		flush(cout);
 
 		std::this_thread::sleep_for(m_delay);
 
@@ -125,7 +126,7 @@ void Input::retrieve()
 					}
 				}
 			}
-			else // Failse m_condition
+			else // Fails m_condition
 			{
 				cout << "\nINVALID INPUT" << endl;
 				cont = true;
