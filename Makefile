@@ -3,31 +3,23 @@ all: blackjack
 play: blackjack
 	./blackjack
 
-blackjack: game
-	g++ -o blackjack Blackjack.cpp Art.o Card.o CardSet.o Chip.o Dealer.o Deck.o Game.o Hand.o Input.o Player.o Rank.o Suit.o
+blackjack: headers
+	g++ -o blackjack Blackjack.cpp Art.o Card.o Rank.o Suit.o CardSet.o Deck.o Hand.o Chip.o Dealer.o Input.o Player.o Game.o
 
-art:
-	g++ -c Art.cpp
-
-chip: art
-	g++ -c Chip.cpp
-
-card: art
-	g++ -c Rank.cpp
-	g++ -c Suit.cpp
-	g++ -c Card.cpp
-
-cardset: card
-	g++ -c CardSet.cpp
-	g++ -c Deck.cpp
-	g++ -c Hand.cpp
-
-game: cardset chip
-	g++ -c Dealer.cpp
-	g++ -c Game.cpp
-	g++ -c Input.cpp
-	g++ -c Player.cpp
+headers:
+	g++ -c components/Art.cpp
+	g++ -c components/Rank.cpp
+	g++ -c components/Suit.cpp
+	g++ -c components/Card.cpp
+	g++ -c components/CardSet.cpp
+	g++ -c components/Deck.cpp
+	g++ -c components/Hand.cpp
+	g++ -c components/Chip.cpp
+	g++ -c game/Dealer.cpp
+	g++ -c game/Input.cpp
+	g++ -c game/Player.cpp
+	g++ -c game/Game.cpp
 
 clean:
-	rm blackjack
-	rm *.o
+	rm -f blackjack
+	rm -f *.o

@@ -1,9 +1,9 @@
 #ifndef DEALER_H
 #define DEALER_H
 
-#include "Deck.h"
-#include "Hand.h"
-#include "Art.h"
+#include "../components/Deck.h"
+#include "../components/Hand.h"
+#include "../components/Art.h"
 
 class Dealer
 {

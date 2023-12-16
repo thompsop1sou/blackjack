@@ -1,10 +1,10 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include "../components/Art.h"
 #include "Dealer.h"
 #include "Player.h"
 #include "Input.h"
-#include "Art.h"
 
 class Game
 {

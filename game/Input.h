@@ -15,7 +15,7 @@ using std::vector;
 using std::chrono::seconds;
 using std::function;
 
-#include "Art.h"
+#include "../components/Art.h"
 
 class Input
 {

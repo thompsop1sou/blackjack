@@ -4,9 +4,9 @@
 #include <string>
 using std::string;
 
-#include "Hand.h"
-#include "Chip.h"
-#include "Art.h"
+#include "../components/Hand.h"
+#include "../components/Chip.h"
+#include "../components/Art.h"
 
 class Player
 {
